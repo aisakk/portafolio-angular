@@ -26,7 +26,7 @@ export class PortfolioComponent implements OnInit {
       type: 'filter-app',
     },
     {
-      banner: 'assets/img/ideasbox.png',
+      banner: 'assets/img/ideaxbox.png',
       pdfOrLink: 'assets/img/pdfportfolio/ideasbox.pdf',
       text: 'ideasbox',
       type: 'filter-web',

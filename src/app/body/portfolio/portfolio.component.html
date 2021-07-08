@@ -26,7 +26,7 @@
             <div class="col-lg-4 col-md-6 portfolio-item" *ngFor="let imagen of Images" [ngClass]="imagen.type">
               <div class="portfolio-wrap rounded d-flex justify-content-center align-items-center">
                 <h2 style="z-index:1;" class="position-absolute text-light">{{ imagen.text }}</h2>
-                <img style="filter: brightness(50%); object-fit: cover;height:250px" [src]="imagen.banner" class="img-fluid" alt="">
+                <img style="filter: brightness(50%); object-fit: cover;height:250px" [src]="imagen.banner" class="img-fluid rounded" alt="">
                 <div class="portfolio-links">
                   <a [href]="imagen.pdfOrLink" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
                 </div>
