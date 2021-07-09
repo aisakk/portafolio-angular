@@ -12,7 +12,6 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 // error_reporting(0);
 $message = json_decode(file_get_contents("php://input"));
-var_dump($message->name);
 $mail = new PHPMailer(true);
 
 

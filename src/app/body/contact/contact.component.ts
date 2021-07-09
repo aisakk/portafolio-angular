@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit {
   
 
   sendMessage(){
-    let url = 'http://localhost/portfolio/contacto.php'
+    let url = `http://localhost:80/portfolio/contacto.php`
     const headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json; charset=utf-8');
     let json = {
@@ -41,12 +41,12 @@ export class ContactComponent implements OnInit {
         console.log(data);
      },
     response => {
-        if(response.status < 300 || response.status >= 200){
-       
+
+        if(response.status <= 299 && response.status >= 200){
           setTimeout(()=>{
             this.load = false
             this.success = true 
-          }, 3000);
+          }, 2000);
           setTimeout(()=>{
             this.success = false
           }, 4000)
@@ -55,12 +55,11 @@ export class ContactComponent implements OnInit {
           this.load = true
           setTimeout(()=>{
             this.error = true
+            this.load = false
           }, 3000)
           setTimeout(()=>{
             this.error = false
-
           }, 4000)
-          console.log(response)
         }
     })
   }
