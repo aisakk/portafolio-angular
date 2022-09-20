@@ -14,7 +14,7 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 $message = json_decode(file_get_contents("php://input"));
 $mail = new PHPMailer(true);
 
-
+a
 if(!empty($message)){
     try{
         $mail->SMTPDebug = 2;                      // Enable verbose debug output
